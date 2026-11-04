@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Land Your Dream Data, ML or AI Job By 2027 | Hired in Data</title>
+<meta name="description" content="Free live workshop: the positioning, pipeline and interview system our clients use to land Data, ML and AI roles. Tuesday 10 November, 7pm EST.">
+<meta property="og:title" content="Land Your Dream Data, ML or AI Job By 2027">
+<meta property="og:description" content="Free live workshop with Egor Howell & Mandy Liu. Tuesday 10 November, 7pm EST. Spots are limited.">
+<meta property="og:image" content="https://webinar.hiredindata.com/assets/card.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Hired in Data palette: cream #FFFBEA, white, sky #8ABFEC, navy #293565 */
+  --ink:#1C2448; --ink-2:#3D4566; --muted:#6B7290;
+  --bg:#FFFBEA; --card:#FFFFFF; --line:#EFE8CF;
+  --night:#293565; --night-2:#323F75; --night-line:#45538D;
+  --accent:#8ABFEC; --accent-hover:#A6D0F2; --accent-ink:#3A78B5; --accent-soft:#E6F1FB;
+  --on-dark:#C9D1EA;
+  --gold:#F4C24D;
+  --r:18px;
+  --wrap:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.narrow{max-width:720px;margin:0 auto}
+h1,h2,h3{line-height:1.12;letter-spacing:-.025em;font-weight:800}
+h2{font-size:clamp(30px,4.4vw,46px);margin-bottom:18px}
+h3{font-size:21px;letter-spacing:-.01em}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:14px}
+.hero .eyebrow,.dark .eyebrow,.final .eyebrow{color:var(--accent)}
+.hl{background:linear-gradient(transparent 60%,rgba(138,191,236,.6) 60%);padding:0 .08em}
+.hero .hl,.dark .hl,.final .hl{background:none;color:var(--accent);padding:0}
+section{padding:96px 0}
+p+p{margin-top:16px}
+.lead{font-size:19px;color:var(--ink-2)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--night);text-decoration:none;font-weight:800;font-size:17px;padding:16px 28px;border-radius:999px;box-shadow:0 10px 30px -10px rgba(138,191,236,.8);transition:transform .15s,background .15s}
+.btn:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.btn small{font-weight:600;opacity:.8;font-size:14px}
+.btn-sm{padding:10px 18px;font-size:15px;box-shadow:none}
+.cta-row{margin-top:36px}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(41,53,101,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--night-line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{color:#fff;font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none}
+.logo span{color:var(--accent)}
+
+/* hero */
+.hero{background:radial-gradient(1000px 500px at 80% -10%,rgba(138,191,236,.28),transparent 60%),var(--night);color:#fff;padding:72px 0 88px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#DCEBF9;background:rgba(138,191,236,.14);border:1px solid rgba(138,191,236,.4);padding:7px 14px;border-radius:999px;margin-bottom:24px}
+.pill i{width:8px;height:8px;border-radius:50%;background:#45E0A0;box-shadow:0 0 0 4px rgba(69,224,160,.2)}
+.hero h1{font-size:clamp(38px,5.6vw,64px);font-weight:900;margin-bottom:22px}
+.hero .lead{color:var(--on-dark);max-width:560px}
+.when{display:flex;flex-wrap:wrap;gap:10px 22px;margin:28px 0 26px;font-weight:600;color:#EEF2FB}
+.when div{display:flex;align-items:center;gap:8px}
+.when svg{width:18px;height:18px;color:var(--accent)}
+.countdown-label{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9B3D8;font-weight:700;margin-bottom:10px}
+.countdown{display:flex;gap:10px}
+.countdown div{background:var(--night-2);border:1px solid var(--night-line);border-radius:14px;min-width:78px;padding:12px 10px;text-align:center}
+.countdown b{display:block;font-size:30px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.countdown span{font-size:12px;color:#A9B3D8;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.hosts-mini{display:flex;align-items:center;gap:12px;margin-top:32px;color:var(--on-dark);font-size:15px}
+.hosts-mini .faces{display:flex}
+.hosts-mini img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--night);background:#222}
+.hosts-mini img+img{margin-left:-12px}
+.hosts-mini strong{color:#fff}
+
+.form-card{background:#fff;color:var(--ink);border-radius:22px;padding:28px 26px 10px;box-shadow:0 30px 80px -20px rgba(10,15,40,.55);scroll-margin-top:84px}
+.form-card h3{font-size:24px;margin-bottom:4px}
+.form-card .sub{color:var(--muted);font-size:15px;margin-bottom:6px}
+.form-card .free{display:inline-block;background:var(--accent-soft);color:var(--accent-ink);font-weight:700;font-size:13px;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.form-card iframe{min-height:584px}
+.form-card .alt{font-size:13px;color:var(--muted);text-align:center;padding:4px 0 14px}
+.form-card .alt a{color:var(--accent-ink);font-weight:600}
+
+/* problem */
+.problem p{font-size:19px;color:var(--ink-2)}
+.problem p strong{color:var(--ink)}
+.callout{margin-top:28px;padding:22px 26px;border-left:4px solid var(--accent);background:var(--card);border-radius:0 14px 14px 0;font-size:21px;font-weight:700;letter-spacing:-.01em}
+
+/* why different */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.contrast{display:grid;gap:14px;margin-top:8px}
+.contrast div{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:16px}
+.contrast .x{color:#E0526B;font-weight:800}
+.contrast .y{color:#1FAE76;font-weight:800}
+.photo{border-radius:var(--r);overflow:hidden;background:#dde;aspect-ratio:4/3;box-shadow:0 30px 60px -25px rgba(10,14,28,.45)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+
+/* pillars */
+.white{background:var(--card)}
+.center{text-align:center}
+.center .lead{max-width:640px;margin:0 auto}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px;text-align:left}
+.pillar{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px 30px;position:relative}
+.pillar .num{position:absolute;top:22px;right:24px;font-size:14px;font-weight:800;color:var(--accent-ink);opacity:.8}
+.pillar .icon{width:84px;height:84px;object-fit:contain;margin-bottom:18px}
+.pillar h3{margin-bottom:6px}
+.pillar .tag{color:var(--muted);font-size:15px;margin-bottom:16px}
+.ticks{list-style:none;display:grid;gap:11px}
+.ticks li{display:flex;gap:11px;font-size:16px;color:var(--ink-2)}
+.ticks li::before{content:"";flex:0 0 20px;height:20px;margin-top:2px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23293565'%3E%3Cpath d='M8.3 13.6 4.7 10l1.4-1.4 2.2 2.2 5.6-5.6 1.4 1.4z'/%3E%3C/svg%3E") center/14px no-repeat}
+
+/* takeaways */
+.take{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
+.take div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px}
+.take h4{font-size:17px;font-weight:700;letter-spacing:-.01em;margin-bottom:6px;display:flex;gap:10px;align-items:center}
+.take h4 b{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--accent-soft);color:var(--night);font-size:14px}
+.take p{color:var(--muted);font-size:15.5px}
+
+/* results */
+.dark{background:var(--night);color:#fff}
+.dark .lead{color:var(--on-dark)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:44px 0 40px}
+.stat{background:var(--night-2);border:1px solid var(--night-line);border-radius:16px;padding:24px;text-align:center}
+.stat b{display:block;font-size:40px;font-weight:900;letter-spacing:-.03em;color:#fff}
+.stat span{color:#B3BCDD;font-size:15px}
+.shots{display:grid;gap:18px}
+.shot{border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--night-line)}
+.disclaim{margin-top:20px;font-size:13px;color:#9AA4CB;text-align:center}
+
+/* logo strip */
+.logos{padding:36px 0;background:var(--card);border-bottom:1px solid var(--line);text-align:center}
+.logos p{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.logo-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px 40px}
+.logo-row img{height:22px;width:auto;filter:grayscale(1);opacity:.65;transition:.2s}
+.logo-row img:hover{filter:none;opacity:1}
+
+/* story marquee */
+.marquee{overflow:hidden;display:grid;gap:16px;margin:0 0 44px;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:16px;width:max-content;animation:scroll 70s linear infinite}
+.track.rev{animation-direction:reverse}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(calc(-50% - 8px))}}
+.story{display:flex;gap:14px;align-items:flex-start;width:330px;background:var(--night-2);border:1px solid var(--night-line);border-radius:16px;padding:18px}
+.story .av{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:0 0 48px;background:var(--night-line)}
+.story .metric{display:block;font-size:20px;font-weight:800;color:var(--accent);letter-spacing:-.02em;line-height:1.2}
+.story p{font-size:14.5px;color:#E3E8F6;margin:4px 0 6px;line-height:1.45}
+.story .who{font-size:13px;color:#A9B3D8;font-weight:600}
+@media (prefers-reduced-motion:reduce){.track{animation:none}.marquee{overflow-x:auto}}
+
+/* wins grid */
+.shots{grid-template-columns:1fr 1fr}
+.shots.collapsed .shot:nth-child(n+7){display:none}
+.more{margin-top:22px;background:none;border:1px solid var(--night-line);color:#DCEBF9;font:inherit;font-weight:700;font-size:15px;padding:12px 22px;border-radius:999px;cursor:pointer}
+.more:hover{border-color:var(--accent);color:#fff}
+
+/* hosts */
+.hosts{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px;text-align:left}
+.host{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.host .ph{aspect-ratio:1/1;background:#dde}
+.host .ph img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.host .body{padding:26px}
+.host h3{font-size:24px}
+.host .role{color:var(--accent-ink);font-weight:600;font-size:15px;margin:2px 0 16px}
+
+/* why now */
+.final{background:radial-gradient(800px 400px at 50% 120%,rgba(138,191,236,.32),transparent 60%),var(--night);color:#fff;text-align:center}
+.final .lead{color:var(--on-dark);max-width:620px;margin:0 auto}
+.final .date{display:inline-block;margin-top:28px;font-weight:700;color:#DCEBF9;border:1px solid var(--night-line);padding:10px 18px;border-radius:999px;font-size:15px}
+
+footer{background:#222C56;color:#9AA4CB;font-size:13px;padding:36px 0 110px;border-top:1px solid var(--night-line)}
+footer .wrap{display:grid;gap:12px}
+footer p{max-width:880px}
+
+/* mobile sticky CTA */
+.mbar{display:none}
+
+@media (max-width:900px){
+  section{padding:72px 0}
+  .hero{padding:48px 0 64px}
+  .hero-grid,.split,.hosts{grid-template-columns:1fr;gap:36px}
+  .pillars,.take,.stats,.shots{grid-template-columns:1fr}
+  .story{width:290px}
+  .countdown div{min-width:0;flex:1}
+  .top .btn{display:none}
+  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(41,53,101,.95);backdrop-filter:blur(10px);border-top:1px solid var(--night-line);transition:transform .25s}
+  .mbar.hide{transform:translateY(110%)}
+  .mbar .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">Hired<span>in</span>Data</a>
+    <a class="btn btn-sm" href="#register">Save my free seat</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="pill"><i></i>Free live workshop · For Data, ML &amp; AI professionals</div>
+      <h1>Land Your Dream <span class="hl">Data, ML or AI</span> Job By 2027</h1>
+      <p class="lead">A live workshop where we walk you through the exact positioning, networking and interview system our clients use to turn ignored applications into offers. No "just apply to more jobs." No generic resume tips.</p>
+
+      <div class="when">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Tuesday, 10 November</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span id="localTime">7pm EST</span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l5-3v10l-5-3M3 6h12v12H3z"/></svg>Live online</div>
+      </div>
+
+      <div class="countdown-label" id="cdLabel">Workshop starts in</div>
+      <div class="countdown" id="countdown">
+        <div><b id="cd-d">--</b><span>Days</span></div>
+        <div><b id="cd-h">--</b><span>Hours</span></div>
+        <div><b id="cd-m">--</b><span>Mins</span></div>
+        <div><b id="cd-s">--</b><span>Secs</span></div>
+      </div>
+
+      <div class="hosts-mini">
+        <div class="faces">
+          <img src="assets/egor-headshot.jpg" alt="Egor Howell">
+          <img src="assets/mandy-headshot.jpg" alt="Mandy Liu">
+        </div>
+        <div>Hosted by <strong>Egor Howell</strong> &amp; <strong>Mandy Liu</strong></div>
+      </div>
+    </div>
+
+    <div class="form-card" id="register">
+      <span class="free">FREE · Spots are limited</span>
+      <h3>Grab your spot</h3>
+      <p class="sub">Complete this quick form and we'll send you the joining link.</p>
+      <iframe data-tally-src="https://tally.so/embed/laBlop?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="584" frameborder="0" marginheight="0" marginwidth="0" title="Webby: How To Land Your Dream Data, ML or AI Job"></iframe>
+      <p class="alt">Form not loading? <a href="https://tally.so/r/laBlop" target="_blank" rel="noopener">Register here →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos"><div class="wrap"><p>We've helped people land jobs at</p><div class="logo-row"><img src="assets/logos/meta.svg" data-remote="https://egor.hiredindata.com/assets/logos/meta.svg" alt="Meta" onerror="fb(this)"><img src="assets/logos/microsoft.svg" data-remote="https://egor.hiredindata.com/assets/logos/microsoft.svg" alt="Microsoft" onerror="fb(this)"><img src="assets/logos/ibm.svg" data-remote="https://egor.hiredindata.com/assets/logos/ibm.svg" alt="IBM" onerror="fb(this)"><img src="assets/logos/aviva.svg" data-remote="https://egor.hiredindata.com/assets/logos/aviva.svg" alt="Aviva" onerror="fb(this)"><img src="assets/logos/visa.svg" data-remote="https://egor.hiredindata.com/assets/logos/visa.svg" alt="Visa" onerror="fb(this)"><img src="assets/logos/wise.svg" data-remote="https://egor.hiredindata.com/assets/logos/wise.svg" alt="Wise" onerror="fb(this)"><img src="assets/logos/capitalone.png" data-remote="https://egor.hiredindata.com/assets/logos/capitalone.png" alt="Capital One" onerror="fb(this)"><img src="assets/logos/doordash.svg" data-remote="https://egor.hiredindata.com/assets/logos/doordash.svg" alt="DoorDash" onerror="fb(this)"><img src="assets/logos/tiktok.svg" data-remote="https://egor.hiredindata.com/assets/logos/tiktok.svg" alt="TikTok" onerror="fb(this)"><img src="assets/logos/trainline.png" data-remote="https://egor.hiredindata.com/assets/logos/trainline.png" alt="Trainline" onerror="fb(this)"><img src="assets/logos/gousto.svg" data-remote="https://egor.hiredindata.com/assets/logos/gousto.svg" alt="Gousto" onerror="fb(this)"></div></div></section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="wrap narrow">
+    <span class="eyebrow">Sound familiar?</span>
+    <h2>You're qualified. So why aren't the offers coming in?</h2>
+    <p>Most people stuck in a data job search assume the next offer is one step away: <strong>one more course, one more certification, one more side project, another 200 applications.</strong></p>
+    <p>So they keep stacking skills and firing off resumes into the void. A few recruiter screens. A technical round that goes sideways. Then silence.</p>
+    <p>The truth is the people landing Data, ML and AI roles right now aren't always the most technical. They're the ones who are <strong>positioned</strong> for a specific role, have a <strong>pipeline</strong> of warm referrals instead of cold applications, and know how to <strong>perform</strong> in every interview round, including the negotiation.</p>
+    <div class="callout">You don't have a skills problem. You have a positioning, pipeline and performance problem.</div>
+    <p style="margin-top:24px">This workshop shows you how to fix all three, live, in one evening.</p>
+    <div class="cta-row"><a class="btn" href="#register">Save my free seat →</a></div>
+  </div>
+</section>
+
+<!-- WHY DIFFERENT -->
+<section class="white">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Why this isn't another webinar</span>
+      <h2>Not another "learn Python" session.</h2>
+      <p class="lead">You already know the tech. This is about the part nobody teaches you: how hiring for data roles actually works, and how to win at every stage of it.</p>
+      <div class="contrast" style="margin-top:26px">
+        <div><span class="x">✕</span><span>Generic career advice written for software engineers</span></div>
+        <div><span class="x">✕</span><span>"Just network more" with no idea who to talk to or what to say</span></div>
+        <div><span class="y">✓</span><span>Frameworks built specifically for Data, ML &amp; AI roles</span></div>
+        <div><span class="y">✓</span><span>Real referral scripts and live interview examples you can use the next day</span></div>
+      </div>
+      <div class="cta-row"><a class="btn" href="#register">Save my free seat →</a></div>
+    </div>
+    <div class="photo"><img src="assets/mandy-teaching.jpg" alt="Mandy Liu teaching at a whiteboard" style="object-position:30% center"></div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">What you get in this workshop</span>
+    <h2>The 3P system for landing <span class="hl">data offers</span></h2>
+    <p class="lead">Every part of the search, from the first resume edit to the final salary number.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="num">01</span>
+        <img class="icon" data-f="image13.jpg" src="assets/image13.jpg" alt="" onerror="fb(this)">
+        <h3>Positioning</h3>
+        <p class="tag">Become the obvious hire for one role.</p>
+        <ul class="ticks">
+          <li>What roles, specialisms and industries to "niche" yourself in</li>
+          <li>How to create a resume that actually converts into interviews</li>
+          <li>LinkedIn building blocks to land you more recruiter outreach</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <span class="num">02</span>
+        <img class="icon" data-f="image14.jpg" src="assets/image14.jpg" alt="" onerror="fb(this)">
+        <h3>Pipeline</h3>
+        <p class="tag">Stop relying on cold applications.</p>
+        <ul class="ticks">
+          <li>Where to find the right people to network with</li>
+          <li>Referral scripts that give you opportunities that are hidden for others</li>
+          <li>How to network without it feeling transactional</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <span class="num">03</span>
+        <img class="icon" data-f="image01.jpg" src="assets/image01.jpg" alt="" onerror="fb(this)">
+        <h3>Performance</h3>
+        <p class="tag">Convert interviews into offers.</p>
+        <ul class="ticks">
+          <li>Interview frameworks for every type: recruiter, behavioral, technical, coding, theory, case study</li>
+          <li>Live interview examples</li>
+          <li>How to negotiate so you don't leave $10,000s on the table</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cta-row"><a class="btn" href="#register">Save my free seat →</a></div>
+  </div>
+</section>
+
+<!-- TAKEAWAYS -->
+<section class="white">
+  <div class="wrap">
+    <div class="narrow center">
+      <span class="eyebrow">When you log off</span>
+      <h2>You'll walk away knowing exactly what to do next.</h2>
+    </div>
+    <div class="take">
+      <div><h4><b>1</b>Your niche</h4><p>Which role, specialism and industry to target, so recruiters instantly see where you fit.</p></div>
+      <div><h4><b>2</b>A resume that converts</h4><p>How to rewrite your resume so it turns applications into interviews, not rejections.</p></div>
+      <div><h4><b>3</b>A LinkedIn that attracts</h4><p>The building blocks that bring recruiters to you instead of the other way round.</p></div>
+      <div><h4><b>4</b>Your referral playbook</h4><p>Who to reach out to, and the scripts that open doors to roles that never get posted.</p></div>
+      <div><h4><b>5</b>A framework for every round</h4><p>Recruiter, behavioral, technical, coding, theory and case study, with live examples.</p></div>
+      <div><h4><b>6</b>Your negotiation game plan</h4><p>How to push for more once the offer lands, so you don't leave money on the table.</p></div>
+    </div>
+    <div class="cta-row center"><a class="btn" href="#register">Save my free seat →</a></div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="dark">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Real client results</span>
+      <h2>Recent results from people <span class="hl">just like you</span>.</h2>
+      <p class="lead">Data scientists, analysts and ML engineers who stopped spraying applications and started landing offers.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>55+</b><span>Data professionals placed</span></div>
+      <div class="stat"><b>$54K</b><span>Average salary increase</span></div>
+      <div class="stat"><b>$19K</b><span>Average negotiated on top</span></div>
+    </div>
+  </div>
+  <div class="marquee" aria-label="Client results"><div class="track"><div class="story"><img class="av" src="assets/stories/headshot_bach.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_bach.webp" alt="Bach" loading="lazy" onerror="fb(this)"><div><b class="metric">+57% pay</b><p>Landed Senior & a 57% pay bump in 3 months</p><span class="who">Bach</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_adel.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_adel.webp" alt="Adel" loading="lazy" onerror="fb(this)"><div><b class="metric">+$50K</b><p>Moved to the private sector with a $50K pay bump</p><span class="who">Adel</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_michael.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_michael.webp" alt="Michael" loading="lazy" onerror="fb(this)"><div><b class="metric">3 offers</b><p>Landed 3 offers & moved from product DS into a Senior ML role</p><span class="who">Michael</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_islam.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_islam.webp" alt="Islam" loading="lazy" onerror="fb(this)"><div><b class="metric">£45K → £136K</b><p>Went from redundancy to a £136K pro-rata role, 3x his old salary</p><span class="who">Islam</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_sehaj.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_sehaj.webp" alt="Sehaj" loading="lazy" onerror="fb(this)"><div><b class="metric">+$18K CAD</b><p>Landed in machine learning with an $18K CAD raise</p><span class="who">Sehaj</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_mansi.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_mansi.webp" alt="Mansi" loading="lazy" onerror="fb(this)"><div><b class="metric">6-figure @ Meta</b><p>Landed a 6-figure Junior DS role at Meta on a student visa</p><span class="who">Mansi</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_zack.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_zack.webp" alt="Zack" loading="lazy" onerror="fb(this)"><div><b class="metric">$150K TC</b><p>Landed a $150K Business Analyst role</p><span class="who">Zack</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_souravi.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_souravi.webp" alt="Souravi" loading="lazy" onerror="fb(this)"><div><b class="metric">Senior DS role</b><p>Bagged a Senior DS role after a 1-year career break</p><span class="who">Souravi</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_mark.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_mark.webp" alt="Mark" loading="lazy" onerror="fb(this)"><div><b class="metric">+£21K</b><p>Became Trainline DS Manager with a £21K bump</p><span class="who">Mark</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_bach.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_bach.webp" aria-hidden="true" alt="Bach" loading="lazy" onerror="fb(this)"><div><b class="metric">+57% pay</b><p>Landed Senior & a 57% pay bump in 3 months</p><span class="who">Bach</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_adel.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_adel.webp" aria-hidden="true" alt="Adel" loading="lazy" onerror="fb(this)"><div><b class="metric">+$50K</b><p>Moved to the private sector with a $50K pay bump</p><span class="who">Adel</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_michael.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_michael.webp" aria-hidden="true" alt="Michael" loading="lazy" onerror="fb(this)"><div><b class="metric">3 offers</b><p>Landed 3 offers & moved from product DS into a Senior ML role</p><span class="who">Michael</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_islam.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_islam.webp" aria-hidden="true" alt="Islam" loading="lazy" onerror="fb(this)"><div><b class="metric">£45K → £136K</b><p>Went from redundancy to a £136K pro-rata role, 3x his old salary</p><span class="who">Islam</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_sehaj.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_sehaj.webp" aria-hidden="true" alt="Sehaj" loading="lazy" onerror="fb(this)"><div><b class="metric">+$18K CAD</b><p>Landed in machine learning with an $18K CAD raise</p><span class="who">Sehaj</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_mansi.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_mansi.webp" aria-hidden="true" alt="Mansi" loading="lazy" onerror="fb(this)"><div><b class="metric">6-figure @ Meta</b><p>Landed a 6-figure Junior DS role at Meta on a student visa</p><span class="who">Mansi</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_zack.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_zack.webp" aria-hidden="true" alt="Zack" loading="lazy" onerror="fb(this)"><div><b class="metric">$150K TC</b><p>Landed a $150K Business Analyst role</p><span class="who">Zack</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_souravi.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_souravi.webp" aria-hidden="true" alt="Souravi" loading="lazy" onerror="fb(this)"><div><b class="metric">Senior DS role</b><p>Bagged a Senior DS role after a 1-year career break</p><span class="who">Souravi</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_mark.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_mark.webp" aria-hidden="true" alt="Mark" loading="lazy" onerror="fb(this)"><div><b class="metric">+£21K</b><p>Became Trainline DS Manager with a £21K bump</p><span class="who">Mark</span></div></div></div><div class="track rev"><div class="story"><img class="av" src="assets/stories/headshot_atera.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_atera.webp" alt="Atera" loading="lazy" onerror="fb(this)"><div><b class="metric">$88K</b><p>Broke into data from biotech within 3 months at $88K</p><span class="who">Atera</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_abrar.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_abrar.webp" alt="Abrar" loading="lazy" onerror="fb(this)"><div><b class="metric">First job, 2 months</b><p>Landed his first job in 2 months, $70–100K range</p><span class="who">Abrar</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_satyajit.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_satyajit.webp" alt="Satyajit" loading="lazy" onerror="fb(this)"><div><b class="metric">Industry in 3 months</b><p>Turned academic experience into an industry role</p><span class="who">Satyajit</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_ahmed.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_ahmed.webp" alt="Ahmed" loading="lazy" onerror="fb(this)"><div><b class="metric">82 days</b><p>Landed his first data job in Paris in 82 days</p><span class="who">Ahmed</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_cristina.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_cristina.webp" alt="Cristina" loading="lazy" onerror="fb(this)"><div><b class="metric">38K → 82K</b><p>Landed an $82K Senior ML Engineer role at a gaming company</p><span class="who">Cristina</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_phoebe.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_phoebe.webp" alt="Phoebe" loading="lazy" onerror="fb(this)"><div><b class="metric">76K → 100K</b><p>Jumped from software engineering to $100K Senior Data Analyst</p><span class="who">Phoebe</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_anthony.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_anthony.webp" alt="Anthony" loading="lazy" onerror="fb(this)"><div><b class="metric">$148K AUD TC</b><p>Landed a $148K Data Scientist role at Visa in 4 months</p><span class="who">Anthony</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_shilpa.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_shilpa.webp" alt="Shilpa" loading="lazy" onerror="fb(this)"><div><b class="metric">4 offers</b><p>Landed 4 offers & a PM role at TikTok Shop in 4 months</p><span class="who">Shilpa</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_aaron.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_aaron.webp" alt="Aaron" loading="lazy" onerror="fb(this)"><div><b class="metric">Upleveled offer</b><p>Got upleveled to Senior Financial Analyst mid-interview</p><span class="who">Aaron</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_atera.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_atera.webp" aria-hidden="true" alt="Atera" loading="lazy" onerror="fb(this)"><div><b class="metric">$88K</b><p>Broke into data from biotech within 3 months at $88K</p><span class="who">Atera</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_abrar.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_abrar.webp" aria-hidden="true" alt="Abrar" loading="lazy" onerror="fb(this)"><div><b class="metric">First job, 2 months</b><p>Landed his first job in 2 months, $70–100K range</p><span class="who">Abrar</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_satyajit.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_satyajit.webp" aria-hidden="true" alt="Satyajit" loading="lazy" onerror="fb(this)"><div><b class="metric">Industry in 3 months</b><p>Turned academic experience into an industry role</p><span class="who">Satyajit</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_ahmed.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_ahmed.webp" aria-hidden="true" alt="Ahmed" loading="lazy" onerror="fb(this)"><div><b class="metric">82 days</b><p>Landed his first data job in Paris in 82 days</p><span class="who">Ahmed</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_cristina.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_cristina.webp" aria-hidden="true" alt="Cristina" loading="lazy" onerror="fb(this)"><div><b class="metric">38K → 82K</b><p>Landed an $82K Senior ML Engineer role at a gaming company</p><span class="who">Cristina</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_phoebe.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_phoebe.webp" aria-hidden="true" alt="Phoebe" loading="lazy" onerror="fb(this)"><div><b class="metric">76K → 100K</b><p>Jumped from software engineering to $100K Senior Data Analyst</p><span class="who">Phoebe</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_anthony.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_anthony.webp" aria-hidden="true" alt="Anthony" loading="lazy" onerror="fb(this)"><div><b class="metric">$148K AUD TC</b><p>Landed a $148K Data Scientist role at Visa in 4 months</p><span class="who">Anthony</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_shilpa.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_shilpa.webp" aria-hidden="true" alt="Shilpa" loading="lazy" onerror="fb(this)"><div><b class="metric">4 offers</b><p>Landed 4 offers & a PM role at TikTok Shop in 4 months</p><span class="who">Shilpa</span></div></div><div class="story"><img class="av" src="assets/stories/headshot_aaron.webp" data-remote="https://egor.hiredindata.com/assets/stories/headshot_aaron.webp" aria-hidden="true" alt="Aaron" loading="lazy" onerror="fb(this)"><div><b class="metric">Upleveled offer</b><p>Got upleveled to Senior Financial Analyst mid-interview</p><span class="who">Aaron</span></div></div></div></div>
+  <div class="wrap">
+    <div class="shots" id="shots"><div class="shot"><img src="assets/wins/image01.webp" data-remote="https://egor.hiredindata.com/assets/wins/image01.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image02.webp" data-remote="https://egor.hiredindata.com/assets/wins/image02.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image03.webp" data-remote="https://egor.hiredindata.com/assets/wins/image03.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image04.webp" data-remote="https://egor.hiredindata.com/assets/wins/image04.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image05.webp" data-remote="https://egor.hiredindata.com/assets/wins/image05.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image06.webp" data-remote="https://egor.hiredindata.com/assets/wins/image06.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image07.webp" data-remote="https://egor.hiredindata.com/assets/wins/image07.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image08.webp" data-remote="https://egor.hiredindata.com/assets/wins/image08.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image09.webp" data-remote="https://egor.hiredindata.com/assets/wins/image09.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image10.webp" data-remote="https://egor.hiredindata.com/assets/wins/image10.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image11.webp" data-remote="https://egor.hiredindata.com/assets/wins/image11.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image12.webp" data-remote="https://egor.hiredindata.com/assets/wins/image12.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image13.webp" data-remote="https://egor.hiredindata.com/assets/wins/image13.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img src="assets/wins/image14.webp" data-remote="https://egor.hiredindata.com/assets/wins/image14.webp" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img data-f="image05.jpg" src="assets/image05.jpg" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img data-f="image06.jpg" src="assets/image06.jpg" alt="Client win" loading="lazy" onerror="fb(this)"></div><div class="shot"><img data-f="image04.jpg" src="assets/image04.jpg" alt="Client win" loading="lazy" onerror="fb(this)"></div></div>
+    <div class="center"><button class="more" id="moreWins">See more wins ↓</button></div>
+    <p class="disclaim">Results shown are from individual clients and are not typical or guaranteed.</p>
+    <div class="cta-row center"><a class="btn" href="#register">Save my free seat →</a></div>
+  </div>
+</section>
+
+<!-- HOSTS -->
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">Who's running this</span>
+    <h2>Meet your <span class="hl">hosts</span></h2>
+    <p class="lead">We've sat on both sides of the table, and we've done this ourselves before teaching it.</p>
+    <div class="hosts">
+      <div class="host">
+        <div class="ph"><img src="assets/egor-stage.jpg" alt="Egor Howell presenting on stage"></div>
+        <div class="body">
+          <h3>Egor Howell</h3>
+          <p class="role">Data Scientist &amp; ML Engineer</p>
+          <ul class="ticks">
+            <li>5+ years as a Data Scientist &amp; ML Engineer across enterprise, big tech, and startups</li>
+            <li>Secured multiple offers at Gousto, TransferWise, Deliveroo, DoorDash, and startups</li>
+            <li>Landed a $200k role at a startup at age 26</li>
+          </ul>
+        </div>
+      </div>
+      <div class="host">
+        <div class="ph"><img src="assets/mandy-stage.jpg" alt="Mandy Liu presenting on stage" style="object-position:center"></div>
+        <div class="body">
+          <h3>Mandy Liu</h3>
+          <p class="role">Analyst &amp; Data Scientist</p>
+          <ul class="ticks">
+            <li>10+ years as an Analyst &amp; Data Scientist at Meta, EY, and Nextdoor</li>
+            <li>Helps clients land data roles across North America, UK &amp; Europe. Highest: $341k, with 10–20% salary boosts</li>
+            <li>Negotiated an extra $50k increase in her last role without a competing offer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY NOW / FINAL -->
+<section class="final">
+  <div class="wrap">
+    <span class="eyebrow">Why now</span>
+    <h2>Every month of the wrong strategy is a month of lost salary.</h2>
+    <p class="lead">One focused evening on Tuesday 10 November is all it takes to see exactly what's been holding your search back, and what to do instead.</p>
+    <div class="cta-row"><a class="btn" href="#register">Reserve my free seat →</a></div>
+    <div class="date">Live Tuesday 10 November · 7pm EST · Limited spots</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="yr">2026</span> Hired in Data. All rights reserved.</p>
+    <p>This site is not part of, or endorsed by, LinkedIn, Meta, YouTube or Google. Results mentioned on this page are those of specific clients, are not typical, and are not a guarantee of future outcomes. Your results depend on your background, effort, market and many other factors.</p>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><a class="btn" href="#register">Save my free seat →</a></div>
+
+<script>
+// Fall back to the current hosted images if local copies aren't in /assets yet
+function fb(img){img.onerror=null;img.src=img.dataset.remote||("https://webinar.hiredindata.com/assets/images/"+img.dataset.f+"?v=8bc49f10");}
+
+// Wins grid: show 6, reveal the rest on click
+(function(){var g=document.getElementById("shots"),b=document.getElementById("moreWins");if(!g||!b)return;g.classList.add("collapsed");b.onclick=function(){g.classList.remove("collapsed");b.remove();};})();
+
+// Countdown — 10 Nov 2026, 7pm EST (UTC-5)
+(function(){
+  var target=new Date("2026-11-10T19:00:00-05:00").getTime();
+  var el={d:document.getElementById("cd-d"),h:document.getElementById("cd-h"),m:document.getElementById("cd-m"),s:document.getElementById("cd-s")};
+  var pad=function(n){return String(n).padStart(2,"0")};
+  function tick(){
+    var t=target-Date.now();
+    if(t<=0){
+      document.getElementById("cdLabel").textContent="We're live";
+      document.getElementById("countdown").style.display="none";
+      return;
+    }
+    el.d.textContent=pad(Math.floor(t/864e5));
+    el.h.textContent=pad(Math.floor(t/36e5)%24);
+    el.m.textContent=pad(Math.floor(t/6e4)%60);
+    el.s.textContent=pad(Math.floor(t/1e3)%60);
+    setTimeout(tick,1000);
+  }
+  tick();
+  // Show the start time in the visitor's own timezone too
+  try{
+    var local=new Date(target).toLocaleTimeString([], {hour:"numeric",minute:"2-digit",timeZoneName:"short"});
+    if(!/EST|GMT-5/.test(local)) document.getElementById("localTime").textContent="7pm EST ("+local+" your time)";
+  }catch(e){}
+  document.getElementById("yr").textContent=new Date().getFullYear();
+})();
+
+// Hide the mobile CTA bar while the form is on screen
+(function(){
+  var bar=document.getElementById("mbar"),form=document.getElementById("register");
+  if(!("IntersectionObserver" in window))return;
+  new IntersectionObserver(function(e){bar.classList.toggle("hide",e[0].isIntersecting)},{threshold:.15}).observe(form);
+})();
+
+// Tally embed (same form as the current page)
+var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);}
+</script>
+</body>
+</html>
