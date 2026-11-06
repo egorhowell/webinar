@@ -7,6 +7,8 @@
  *   - links/redirects to our other domains (egorhowell.com <-> hiredindata.com)
  *     and to the booking/form vendors we use, with ALL incoming params;
  *   - the Aura booking embed, which Trakyo doesn't know, before aura.js reads it;
+ *   - the Tally form embed (data-tally-src), before Tally's embed.js loads it,
+ *     so the form's hidden fields (trakyo_id, utm_*) get filled;
  *   - a hidden trakyo_id input on every <form> (Trakyo fills these);
  *   - window.hidForward(url) / window.hidParams() for our own JS redirects and
  *     form posts.
@@ -67,6 +69,14 @@
     }
   }
 
+  function tagTally(el) {
+    var u = el.getAttribute('data-tally-src');
+    if (u) {
+      var next = forward(u);
+      if (next !== u) el.setAttribute('data-tally-src', next);
+    }
+  }
+
   function tagForm(f) {
     if (f.querySelector('input[name="trakyo_id"]')) return;
     var i = document.createElement('input');
@@ -82,11 +92,13 @@
     if (node.matches('a[href]')) tagLink(node);
     if (node.matches('[data-aura-scheduler]')) tagEmbed(node);
     if (node.matches('form')) tagForm(node);
-    var i, list = node.querySelectorAll('a[href], [data-aura-scheduler], form');
+    if (node.matches('iframe[data-tally-src]')) tagTally(node);
+    var i, list = node.querySelectorAll('a[href], [data-aura-scheduler], form, iframe[data-tally-src]');
     for (i = 0; i < list.length; i++) {
       var el = list[i];
       if (el.tagName === 'A') tagLink(el);
       else if (el.tagName === 'FORM') tagForm(el);
+      else if (el.tagName === 'IFRAME') tagTally(el);
       else tagEmbed(el);
     }
   }

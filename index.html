@@ -464,6 +464,17 @@ function fb(img){img.onerror=null;img.src=img.dataset.remote||("https://webinar.
   new IntersectionObserver(function(e){bar.classList.toggle("hide",e[0].isIntersecting)},{threshold:.15}).observe(form);
 })();
 
+// After someone registers, send them to the thank-you page with every URL
+// parameter (trakyo_id, utm_*...) carried over, so tracking follows them there.
+var THANK_YOU_URL="https://registered.hiredindata.com/";
+window.addEventListener("message",function(e){
+  if(e.origin!=="https://tally.so")return;
+  var m=e.data;
+  try{if(typeof m==="string")m=JSON.parse(m);}catch(err){return;}
+  if(!m||m.event!=="Tally.FormSubmitted")return;
+  window.location.href=window.hidForward?window.hidForward(THANK_YOU_URL):THANK_YOU_URL;
+});
+
 // Tally embed (same form as the current page)
 var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);}
 </script>
