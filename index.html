@@ -466,13 +466,33 @@ function fb(img){img.onerror=null;img.src=img.dataset.remote||("https://webinar.
 
 // After someone registers, send them to the thank-you page with every URL
 // parameter (trakyo_id, utm_*...) carried over, so tracking follows them there.
+// Tally's own embed script also redirects the page when the form has a
+// "redirect on completion" URL set (the Tally.FormRedirect message), and that
+// redirect drops our parameters. This listener is registered before Tally's
+// script loads, so it runs first: it sends the visitor to Tally's URL (or ours)
+// with the parameters added, and stops Tally's handler from running after it.
 var THANK_YOU_URL="https://registered.hiredindata.com/";
+var hidRedirected=false;
+function hidGo(url){
+  if(hidRedirected)return;
+  hidRedirected=true;
+  window.location.href=window.hidForward?window.hidForward(url):url;
+}
 window.addEventListener("message",function(e){
   if(e.origin!=="https://tally.so")return;
   var m=e.data;
   try{if(typeof m==="string")m=JSON.parse(m);}catch(err){return;}
-  if(!m||m.event!=="Tally.FormSubmitted")return;
-  window.location.href=window.hidForward?window.hidForward(THANK_YOU_URL):THANK_YOU_URL;
+  if(!m||!m.event)return;
+  if(m.event==="Tally.FormRedirect"){
+    var url=THANK_YOU_URL;
+    try{var u=new URL(m.payload&&m.payload.url);if(/^https?:$/.test(u.protocol))url=u.href;}catch(err){}
+    e.stopImmediatePropagation();
+    hidGo(url);
+  }else if(m.event==="Tally.FormSubmitted"){
+    // No redirect set in Tally: go to the thank-you page ourselves. Wait a
+    // moment first so a Tally.FormRedirect, if one is coming, can take over.
+    setTimeout(function(){hidGo(THANK_YOU_URL);},800);
+  }
 });
 
 // Tally embed (same form as the current page)
